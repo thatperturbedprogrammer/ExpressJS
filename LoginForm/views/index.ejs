@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+    <!-- if logged in -->
+    <% if(locals.userdata){ %>
+    <div>
+        <h2>Welcome to ______.com</h2>
+        <h3><%= userdata.email %></h3>
+    </div>
+    <% } else {%>
+
+    <div>
+        <form action="/" method="post">
+
+            <h2>Hello</h2>
+            <span>Welcome to ______.com</span>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <% } %>
+
+</body>
+
+</html>
+
